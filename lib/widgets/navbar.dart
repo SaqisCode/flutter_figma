@@ -82,7 +82,7 @@ class _NavBarState extends State<NavBar> with SingleTickerProviderStateMixin {
             width: 80,
             padding: const EdgeInsets.symmetric(
               horizontal: 15, 
-              vertical: 6
+              vertical: 4
             ),
             decoration: BoxDecoration(
               color: _selectedIndex == index
@@ -96,7 +96,6 @@ class _NavBarState extends State<NavBar> with SingleTickerProviderStateMixin {
               color: _selectedIndex == index ? const Color.fromARGB(255, 255, 255, 255) : Colors.grey,
             ),
           ),
-          const SizedBox(height: 5),
           Text(
             label,
             style: TextStyle(
