@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../screens/beranda_screen.dart';
+import '../screens/profil_screen.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);

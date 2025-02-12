@@ -105,7 +105,7 @@ class DetailScreen extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       margin: EdgeInsets.symmetric(vertical: 8),
       child: Container(
-        height: 140, // Pastikan tinggi tetap
+        height: 130, // Pastikan tinggi tetap
         child: Row(
           children: [
             Expanded(
@@ -127,30 +127,35 @@ class DetailScreen extends StatelessWidget {
             Expanded(
               flex: 6,
               child: Padding(
-                padding: EdgeInsets.symmetric(
-                    vertical: 6), // Beri padding untuk teks
+                padding: EdgeInsets.symmetric(vertical: 3), // Beri padding untuk teks
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 5),
                     Text(
                       title,
-                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                      style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w700),
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Icon(Icons.location_on, color: Colors.purple, size: 18),
-                        SizedBox(width: 2),
+                        Padding(
+                          padding: EdgeInsets.only(top: 2),
+                          child: Icon(Icons.location_on, color: Colors.purple, size: 12),
+                        ),
+                        SizedBox(width: 4),
                         Expanded(
-                          child: Text(
+                          child: Padding(
+                            padding: EdgeInsets.only(right: 10),
+                            child: Text(
                             address,
-                            style: TextStyle(fontSize: 12, color: Colors.grey[600]),
-                          ),
+                            style: GoogleFonts.poppins(fontSize: 11, color: Colors.grey[600]),
+                            ),
+                          )
                         ),
                       ],
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 8),
                     Row(
                       children: [
                         Container(
@@ -162,13 +167,13 @@ class DetailScreen extends StatelessWidget {
                           ),
                           child: Text(
                             type,
-                            style: TextStyle(color: Colors.white, fontSize: 10),
+                            style: GoogleFonts.poppins(color: Colors.white, fontSize: 10),
                           ),
                         ),
                         SizedBox(width: 10),
                         Text(
                           price,
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                          style: GoogleFonts.poppins(fontWeight: FontWeight.w600, fontSize: 12),
                         ),
                       ],
                     ),
