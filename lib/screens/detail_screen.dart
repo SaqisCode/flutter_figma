@@ -34,7 +34,7 @@ class DetailScreen extends StatelessWidget {
                   style: GoogleFonts.poppins(
                       color: Colors.black,
                       fontSize: 18,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.w600),
                 ),
               ),
             ],
@@ -100,12 +100,12 @@ class DetailScreen extends StatelessWidget {
   Widget buildKosCard(BuildContext context, String imagePath, String title,
       String address, String type, String price) {
     return Card(
-      color: Colors.white, // Ubah warna latar belakang Card
+      color: Colors.white,
       elevation: 2, // Menambahkan efek bayangan
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      margin: EdgeInsets.symmetric(vertical: 8), // Hapus margin Card
+      margin: EdgeInsets.symmetric(vertical: 8),
       child: Container(
-        height: 145, // Pastikan tinggi tetap
+        height: 140, // Pastikan tinggi tetap
         child: Row(
           children: [
             Expanded(
@@ -128,15 +128,14 @@ class DetailScreen extends StatelessWidget {
               flex: 6,
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                    vertical: 8), // Beri padding untuk teks
+                    vertical: 6), // Beri padding untuk teks
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 5),
                     Text(
                       title,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -146,12 +145,12 @@ class DetailScreen extends StatelessWidget {
                         Expanded(
                           child: Text(
                             address,
-                            style: TextStyle(color: Colors.grey[600]),
+                            style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 15),
+                    SizedBox(height: 10),
                     Row(
                       children: [
                         Container(
@@ -163,13 +162,13 @@ class DetailScreen extends StatelessWidget {
                           ),
                           child: Text(
                             type,
-                            style: TextStyle(color: Colors.white, fontSize: 12),
+                            style: TextStyle(color: Colors.white, fontSize: 10),
                           ),
                         ),
-                        SizedBox(width: 130),
+                        SizedBox(width: 10),
                         Text(
                           price,
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
                         ),
                       ],
                     ),
